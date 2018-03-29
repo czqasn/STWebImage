@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'STWebImage_Example' do
+  pod 'STWebImage', :path => '../'
+
+  target 'STWebImage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
