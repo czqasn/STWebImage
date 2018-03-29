@@ -19,6 +19,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'STWebImage'
 ```
+
+## Sample Code
+
 ```Objective-C
 [self.imageView st_setImageWithUrl:@"https://s2.showstart.com/qn_69c05fad78174f2ea6c70b57dfd8ec73_1080_1528_362983.0x0.jpg" placeholderImage:nil immediatelyDisplay:NO displayType:STImageViewDisplayTypeFadeIn progressBlock:^(CGFloat percent) {
     NSLog(@"%.2f",percent)  ;
