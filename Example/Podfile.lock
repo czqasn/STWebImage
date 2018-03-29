@@ -1,0 +1,32 @@
+PODS:
+  - STDownloader (1.0.0)
+  - STWebImage (1.0.0):
+    - STDownloader
+    - YYCache
+    - YYImage
+    - YYWebImage
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - STWebImage (from `../`)
+
+EXTERNAL SOURCES:
+  STWebImage:
+    :path: ../
+
+SPEC CHECKSUMS:
+  STDownloader: 2b00a6dc87ceb009e96956d5be248f56d34ff745
+  STWebImage: 5edc2a28c84c7a6641f0fab078b222e2de3ff840
+  YYCache: ba0aab7a4b46c00d4005d75bbe9139e2435a3862
+  YYImage: 8aa3d759081a7f1b1651ba79b232b88ffb7884b5
+  YYWebImage: 3648fc6243d748822397fb74b820b6fa9baa8287
+
+PODFILE CHECKSUM: a0b16f907b8d88971f0c4b96692697fd265ab522
+
+COCOAPODS: 1.4.0

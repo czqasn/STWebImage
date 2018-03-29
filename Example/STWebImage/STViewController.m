@@ -7,6 +7,7 @@
 //
 
 #import "STViewController.h"
+#import <STWebImage/STWebImage.h>
 
 @interface STViewController ()
 
@@ -17,13 +18,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [[STImageManager defaultImageManager] cleanCache] ;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill ;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+
+- (IBAction)loadImage:(id)sender {
+    
+    [self.imageView st_setImageWithUrl:@"https://s2.showstart.com/qn_69c05fad78174f2ea6c70b57dfd8ec73_1080_1528_362983.0x0.jpg" placeholderImage:nil immediatelyDisplay:NO displayType:STImageViewDisplayTypeFadeIn progressBlock:^(CGFloat percent) {
+        NSLog(@"%.2f",percent)  ;
+    }] ;
+    
+}
 @end

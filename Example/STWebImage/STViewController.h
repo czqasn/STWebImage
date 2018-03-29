@@ -9,5 +9,7 @@
 @import UIKit;
 
 @interface STViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)loadImage:(id)sender;
 
 @end

@@ -1,0 +1,6 @@
+framework module STWebImage {
+  umbrella header "STWebImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

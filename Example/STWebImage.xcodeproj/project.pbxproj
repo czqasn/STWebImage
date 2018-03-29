@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		1311D19881CC252EF0984C20 /* Pods-STWebImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STWebImage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STWebImage_Example/Pods-STWebImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		24731CAD6032CD1E2CF2499C /* Pods-STWebImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STWebImage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-STWebImage_Tests/Pods-STWebImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2C1915B62534E8A89683311D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2C1915B62534E8A89683311D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		546D623D51E397FF52540586 /* Pods-STWebImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STWebImage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STWebImage_Tests/Pods-STWebImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* STWebImage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STWebImage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,9 +64,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74AB696AB23E36FB08D536AC /* Pods-STWebImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STWebImage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STWebImage_Example/Pods-STWebImage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B287ABEF03DFC8142DC7B7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8B287ABEF03DFC8142DC7B7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AD0ECDD5559FE1D7BED2AABC /* Pods_STWebImage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STWebImage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C28EB16078E80797EE5DC267 /* STWebImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = STWebImage.podspec; path = ../STWebImage.podspec; sourceTree = "<group>"; };
+		C28EB16078E80797EE5DC267 /* STWebImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = STWebImage.podspec; path = ../STWebImage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,11 +355,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-STWebImage_Example/Pods-STWebImage_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/STDownloader/STDownloader.framework",
 				"${BUILT_PRODUCTS_DIR}/STWebImage/STWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STDownloader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
