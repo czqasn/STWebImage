@@ -76,7 +76,7 @@
 
     UIImage *image = nil ;
     image = [[STImageManager defaultImageManager] imageForImageUrl:imageUrl] ;
-    //从缓存读取到图片
+    //read cache from disk
     if(image) {
         !progressBlock ?: progressBlock(1.0);
         _DisplayImage(self, image, YES, displayType) ;
@@ -91,6 +91,7 @@
 
     STWebImageProgress _progressBlock = ^(CGFloat percent,NSData *receivedData) {
         !progressBlock ?: progressBlock(percent);
+        //display progressive image
         if(_webImageDisplayEffectProssive){
             [_webImageDisplayEffectProssive receiveData:receivedData percent:percent] ;
         }
@@ -106,8 +107,9 @@
             _DisplayImage(strong_self, image, immediatelyDisplay,displayType) ;
         }
     };
+    //set placeholder image
     self.image = placeholderImage ;
-    
+    //download from network
     [[STImageManager defaultImageManager] downloadImageWithUrl:imageUrl progress:_progressBlock complete:_completeBlock] ;
 
 }

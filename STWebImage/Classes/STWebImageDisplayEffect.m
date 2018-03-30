@@ -30,7 +30,9 @@ static dispatch_queue_t _GetSTWebImageDisplayEffectProssiveQueue() {
 
 - (void)dealloc
 {
+#if DEBUG
     NSLog(@"%s",__func__) ;
+#endif
 }
 - (instancetype)initWithImageView:(UIImageView *)imageView
 {

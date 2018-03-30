@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger,STImageViewDisplayType) {
 @end
 
 
+//display a effect after image loaded
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wunused-function"
 static void _DisplayImageViewWithType(UIImageView *imageView,STImageViewDisplayType type) {
