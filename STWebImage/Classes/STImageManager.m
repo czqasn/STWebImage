@@ -97,10 +97,8 @@ static NSString *_ImageUrlToCacheKey(NSString *val)
         }
     }
 
-    STWebImageProgress _progress = ^(CGFloat percent) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            !progress ? : progress(percent) ;
-        });
+    STWebImageProgress _progress = ^(CGFloat percent,NSData *receivedData) {
+        !progress ? : progress(percent,receivedData) ;
     };
     STWebImageComplete _complete = ^(UIImage * _Nullable image,NSError * _Nullable error,STWebImageCacheType cacheType) {
         !complete ? : complete(image,error,cacheType) ;

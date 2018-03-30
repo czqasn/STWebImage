@@ -14,6 +14,8 @@
 #import "STImageDownloader.h"
 #import "STImageManager.h"
 #import "STWebImage.h"
+#import "STWebImageDisplay.h"
+#import "STWebImageDisplayEffect.h"
 #import "STWebImageProviderProtocol.h"
 #import "STYYTransaction.h"
 #import "UIImageView+ST.h"

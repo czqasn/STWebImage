@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,STWebImageCacheType) {
     STWebImageCacheTypeDisk
 };
 
-typedef void(^STWebImageProgress)(CGFloat percent);
+typedef void(^STWebImageProgress)(CGFloat percent,NSData  * _Nonnull receivedData);
 typedef void(^STWebImageComplete)(UIImage * _Nullable image,NSError * _Nullable error,STWebImageCacheType cacheType);
 
 /**

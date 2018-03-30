@@ -54,9 +54,9 @@ NS_INLINE void _CleanDownloadCache(NSString * _Nonnull path) {
             copyComplete(image,nil,STWebImageCacheTypeWeb);
         });
     };
-    STDownloadProgress progressBlock = ^(NSURLRequest * request,NSUInteger receiveDataLength,NSUInteger totalDataLength,NSData *receiveData){
+    STDownloadProgress progressBlock = ^(NSURLRequest * request,NSUInteger receiveDataLength,NSUInteger totalDataLength,NSData *receivedData){
         if(!copyProgress) return ;
-        copyProgress(receiveDataLength * 1.0f / totalDataLength);
+        copyProgress(receiveDataLength * 1.0f / totalDataLength,receivedData);
 
     };
     STDownloadFailure failureBlock = ^(NSURLRequest * request,NSError * error) {

@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STWebImageDisplayEffect.h"
 
 NS_ASSUME_NONNULL_BEGIN
-typedef NS_ENUM(NSInteger,STImageViewDisplayType) {
-    STImageViewDisplayTypeNone = 0,
-    STImageViewDisplayTypeFadeIn = 1,
-};
+
 
 @interface UIImageView (TH)
 
